@@ -8,26 +8,30 @@
 </head>
 <body>
 	<button onclick="hi()">click</button>
-	<table>
-		<tr>
-			<th id="th1">Sort this numbers</th>
-		</tr>
-		<tr>
-			<td>123</td>
-		</tr>
-		<tr>
-			<td>11</td>
-		</tr>
+	<table id="grid">
+		<thead>
+			<tr>
+				<th id="th1">Sort this numbers</th>
+			</tr>	
+		</thead>
+		<tbody id="tbody1">
+			<tr>
+				<td>123</td>
+			</tr>
+			<tr>
+				<td>11</td>
+			</tr>
 
-		<tr>
-			<td>999999</td>
-		</tr>
+			<tr>
+				<td>999999</td>
+			</tr>
 
-		<tr>
-			<td>45</td>
-		</tr>
-
+			<tr>
+				<td>45</td>
+			</tr>
+		</tbody>
 	</table>
+	<p>text</p>
 </body>
 <script type="text/javascript">
 	// ------------------------------------------------------------------
@@ -45,12 +49,21 @@
 	// masNumbers.sort(numSort);
 	// alert(masText);
 	// // alert(masNumbers);
+	var grid = document.getElementById('grid');
 	var buttonSortNumbers = document.getElementById('th1');
+	var tbodyData = document.getElementsByTagName('tbody')[0];
+	var tbody = grid.getElementsByTagName('tbody')[0];
 	buttonSortNumbers.onclick = function(){
-		alert("hi2");
+  
+
+      // Составить массив из TR
+      var rowsArray = [].slice.call(tbody.rows,0);
+      alert(rowsArray);
+
 	}
 	function hi(){
-		alert("hi");
+		grid.appendChild(1212);
+		//grid.removeChild(tbody);
 	}
 </script>
 </html>
