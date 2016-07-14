@@ -7,5 +7,23 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	
 </body>
+<script type="text/javascript">
+	// ------------------------------------------------------------------
+	// Функция сортировки массива чисел
+	function numSort(elem1, elem2){
+		return elem1-elem2; 
+	}
+
+	//Объявляем массив
+	var masText =["vasya", "apelsin", "indigo", "meat", 123];
+	masNumbers = [56, 55, 9, 6, 101];
+	//Сортировка
+	masText.sort();
+	masText.reverse();
+	masNumbers.sort(numSort);
+	alert(masText);
+	// alert(masNumbers);
+</script>
 </html>
