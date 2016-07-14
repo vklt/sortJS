@@ -4,23 +4,27 @@
 	<meta charset="utf-8" />
 
 	<title>Some sort</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
 </head>
 <body>
+	<button onclick="hi()">click</button>
 	<table>
 		<tr>
-			<td></td>
+			<th id="th1">Sort this numbers</th>
 		</tr>
 		<tr>
-			<td></td>
+			<td>123</td>
+		</tr>
+		<tr>
+			<td>11</td>
 		</tr>
 
 		<tr>
-			<td></td>
+			<td>999999</td>
 		</tr>
 
 		<tr>
-			<td></td>
+			<td>45</td>
 		</tr>
 
 	</table>
@@ -32,14 +36,21 @@
 		return elem1-elem2; 
 	}
 
-	//Объявляем массив
-	var masText =["vasya", "apelsin", "indigo", "meat", 123];
-	masNumbers = [56, 55, 9, 6, 101];
-	//Сортировка
-	masText.sort();
-	masText.reverse();
-	masNumbers.sort(numSort);
-	alert(masText);
-	// alert(masNumbers);
+	// //Объявляем массив
+	// var masText =["vasya", "apelsin", "indigo", "meat", 123];
+	// masNumbers = [56, 55, 9, 6, 101];
+	// //Сортировка
+	// masText.sort();
+	// masText.reverse();
+	// masNumbers.sort(numSort);
+	// alert(masText);
+	// // alert(masNumbers);
+	var buttonSortNumbers = document.getElementById('th1');
+	buttonSortNumbers.onclick = function(){
+		alert("hi2");
+	}
+	function hi(){
+		alert("hi");
+	}
 </script>
 </html>
